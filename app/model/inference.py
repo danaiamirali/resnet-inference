@@ -6,7 +6,7 @@ model = torch.hub.load("pytorch/vision:v0.10.0", "resnet18", pretrained=True)
 if torch.cuda.is_available():
     model.to("cuda")
 model.eval()
-with open("imagenet_classes.txt", "r") as f:
+with open("model/imagenet_classes.txt", "r") as f:
     categories = [s.strip() for s in f.readlines()]
 
 
