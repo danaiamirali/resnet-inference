@@ -16,6 +16,11 @@ spec:
       - name: image-classifier
         image: image-classifier:latest
         imagePullPolicy: Never
+        resources:
+          requests:
+            cpu: 1000m
+          limits:
+            cpu: 2000m
         ports:
         - containerPort: 8000
 
